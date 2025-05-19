@@ -1,0 +1,226 @@
+\title{13. Primitivní funkce, určitý a neurčitý integrál}
+\author{Marek Kalenda}
+\date{3.5.2025}
+
+\maketitle
+
+
+\section{Primitivní funkce, určitý a neurčitý integrál}
+\subsection{Primitivní funkce}
+Primitivní funkce $F(x)$ spojité reálné funkce $f(x)$ obecně v intervalu $(a,b)$ jest funkcí, pro kterou na celém intervalu $(a,b)$ platí
+$$
+\frac{dF(x)}{dx} = f(x).
+$$
+\subsection{Neurčitý integrál}
+\subsubsection{Definice}
+Neurčitý integrál spojité reálné funkce $f(x)$ jest množina všech jejich primitivních funkcí $F(x)$ lišící se konstantou $C$, kde $C \in \mathbb{R}$. Neurčitý integrál funkce $f(x)$ pak zapisujeme jako
+$$
+\int f(x)dx = F(x) + C,
+$$
+kde funkci $f(x)$ nazýváme integrandem. Ze základní věty integrálního počtu vyplývá vztah mezi operacemi derivování $\left(\frac{d}{dx}\right)$ a integrování $(\int)$, pro každou reálnou funkci $f(x)$ spojitou na intervalu $(a,b)$, ve tvaru
+$$
+\int \frac{df(x)}{dx}dx = \frac{d}{dx}\int f(x)dx = f(x),
+$$
+jedná se ve zkratce o navzájem inverzní operace.
+\subsubsection{Neurčité integrály elementárních funkcí}
+V následující tabulce \ref{tab:int} uvedeme některé neurčité integrály některých vybraných elementárních funkcí.
+\begin{table}[h!]
+\centering
+\vspace{0.2cm}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Funkce \( f(x) \)} & \textbf{Neurčitý integrál \( \int f(x)\,dx \)} \\
+\hline
+\( x^n,\ n \ne -1 \) & \( \dfrac{x^{n+1}}{n+1} + C \) \\
+\hline
+\( \dfrac{1}{x} \) & \( \ln|x| + C \) \\
+\hline
+\( e^x \) & \( e^x + C \) \\
+\hline
+\( a^x,\ a>0,\ a \ne 1 \) & \( \dfrac{a^x}{\ln a} + C \) \\
+\hline
+\( \sin x \) & \( -\cos x + C \) \\
+\hline
+\( \cos x \) & \( \sin x + C \) \\
+\hline
+\( \tan x \) & \( -\ln|\cos x| + C \) \\
+\hline
+\( \cot x \) & \( \ln|\sin x| + C \) \\
+\hline
+\( \sec x \) & \( \ln|\sec x + \tan x| + C \) \\
+\hline
+\( \csc x \) & \( \ln|\csc x - \cot x| + C \) \\
+\hline
+\( \dfrac{1}{\sqrt{1 - x^2}} \) & \( \arcsin x + C \) \\
+\hline
+\( \dfrac{1}{1 + x^2} \) & \( \arctan x + C \) \\
+\hline
+\( \dfrac{1}{x^2 + a^2} \) & \( \dfrac{1}{a} \arctan\left( \dfrac{x}{a} \right) + C \) \\
+\hline
+\( \dfrac{1}{\sqrt{x^2 + a^2}} \) & \( \ln\left| x + \sqrt{x^2 + a^2} \right| + C \) \\
+\hline
+\( \dfrac{1}{\sqrt{x^2 - a^2}} \) & \( \ln\left| x + \sqrt{x^2 - a^2} \right| + C \) \\
+\hline
+\end{tabular}
+\caption{Neurčité integrály elementárních funkcí}
+\label{tab:int}
+\end{table}
+\subsubsection{Základní vztahy}
+Uvažujme dvě spojité funkce $f(x), g(x)$ na společném intervalu $(a,b)$ ve tvaru $f(x)g(x)$. Pro neurčitý integrál součtu, respektive rozdílu platí
+$$
+\int f(x)\pm g(x)dx = \int f(x) dx \pm \int g(x)dx.
+$$
+Potom pro neurčitý integrál takového součinu platí
+$$
+\int f(x)g(x)dx.
+$$
+Nyní takto vzniklý tvar řešíme metodou \textit{per partes} tzn. po částech. Tato metoda přímo vyplývá z pravidla derivace součinu funkcí $u(x)v(x)$, pro které viz. 12. kapitola platí
+$$
+\frac{du(x)v(x)}{dx} = \frac{du(x)}{dx}v(x) + u(x)\frac{dv(x)}{dx}.
+$$
+Tento tvar lze integrováním upravit na 
+$$
+u(x)v(x) = \int \frac{du(x)}{dx}v(x)dx + \int u(x)\frac{dv(x)}{dx}dx,
+$$
+nyní vyjádříme jeden libovolný člen s integrálem a upravíme
+$$
+\int v(x)du(x) = u(x)v(x) - \int u(x)dv(x),
+$$
+dále položíme 
+$$
+\int f(x)g(x)dx = \int v(x)du(x)
+$$ 
+a vyjádříme upravené funkce $f(x),g(x)$ jako
+$$
+du(x) = g(x)dx, v(x) = f(x),
+$$
+potom pro zbylé členy platí
+$$
+u(x) = \int g(x)dx, dv(x) = \frac{df(x)}{dx}dx,
+$$
+přičemž přidání konstanty $C$ nás nezajímá a následně lze psát finální vztah pro integraci součinu funkcí $f(x)g(x)$ jako 
+$$
+\int f(x)g(x)dx = f(x)\int g(x)dx - \int\left(\int g(x)dx \frac{df(x)}{dx}\right)dx.
+$$
+Mnohem rozšířenější je však pro funkce $u(x),v(x)$ výše uvedený tvar
+$$
+\int v(x)du(x) = u(x)v(x) - \int u(x)dv(x).
+$$
+V případě stále ještě integrálního výsledku lze metodu jednoduše iterovat.
+
+Příklad č.1:
+$$
+\int \ln{x} dx.
+$$
+\begin{enumerate}
+    \item Připravíme na metodu \textit{per partes} 
+    $$
+    u(x) = \ln{x}, dv(x) = 1 dx.
+    $$
+    \item Určíme zbylé členy $du(x), v(x)$
+    $$
+    du(x) = \frac{d}{dx}(\ln{x}) = \frac{1}{x}, v(x) = \int dv(x) = \int 1 dx = x.
+    $$
+    \item Dosadíme všechny proměnné do tvaru pro \textit{per partes}
+    $$
+    \int \ln{x} dx= x\ln{x} - \int \frac{x}{x}dx = x\ln{x} - \int1dx = x\ln{x} - x + C.
+    $$
+\end{enumerate}
+
+Příklad č.2:
+$$
+\int e^x\sin{x} dx.
+$$
+\begin{enumerate}
+    \item Připravíme na metodu \textit{per partes} 
+    $$
+    u(x) = \sin{x}, dv(x) = e^x dx.
+    $$
+    \item Určíme zbylé členy $du(x), v(x)$
+    $$
+    du(x) = \frac{d}{dx}(\sin{x}) = \cos{x}, v(x) = \int dv(x) = \int e^x dx = e^x.
+    $$
+    \item Dosadíme všechny proměnné do tvaru pro \textit{per partes}
+    $$
+    \int e^x\sin{x}dx = e^x\sin{x} - \int e^x\cos{x}dx + C_1.
+    $$
+    \item Člen $\int e^x\cos{x}dx$ rovněž řešíme analogicky metodou \textit{per partes} a volíme $dv(x) = e^x$ nebo obecně stejnou funkci jako při počítání v první iteraci metody \textit{per partes}
+    $$
+    \int e^x\cos{x}dx = e^x\cos{x} - \int e^x(-\sin{x)}dx = e^x\cos{x} + \int e^x\sin{x}dx + C_2.
+    $$
+    \item Dosadíme do původního vztahu
+    $$
+    \int e^x\sin{x}dx = e^x\sin{x} - e^x\cos{x} - \int e^x\sin{x}dx + C.
+    $$
+    \item Konečně vyjádříme
+    $$
+    \int e^x\sin{x}dx = \frac{1}{2}(e^x\sin{x} - e^x\cos{x}) + C.
+    $$    
+\end{enumerate}
+Pro neurčitý integrál podílu funkcí $f(x)g(x)$ nepochybně taktéž existuje obecný vzorec vycházející z pravidel derivací podílu ale častější je převedení do tvaru
+$$
+\int \frac{f(x)}{g(x)}dx = \int f(x) (g(x))^{-1}dx,
+$$
+a nyní už je to zase klasické \textit{per partes}.
+Další zásadní metodou počítání neurčitých integrálů reálných spojitých složených funkcí jest metoda substituce. Uvažujme funkci ve tvaru $\frac{g(x)}{dx}f(g(x))$ z funkcí $f(x),g(x)$ a interval $(a,b)$, na kterém je spojitá. Potom pro neurčitý integrál takové funkce platí
+$$
+\int\frac{dg(x)}{dx} f(g(x))dx.
+$$
+Nyní takto vzniklý tvar řešíme metodou substituce. Tato metoda přímo vychází z řetízkového pravidla derivování složených funkcí z 12. kapitoly
+$$
+\frac{d}{dx}(f(g(x)))= \frac{df(g(x))}{dg(x)}\frac{dg(x)}{dx},
+$$
+nyní vztah zintegrujeme
+$$
+f(g(x))= \int \frac{df(g(x))}{dg(x)}\frac{dg(x)}{dx} dx,
+$$
+pokládáme substituci v podobě vnitřní funkce $g(x)$ tzn. $u = g(x)$ a zderivujeme $du = \frac{dg(x)}{dx}dx$ a dosadíme do předchozího vztahu
+$$
+f(u) = \int \frac{df(u)}{du}\frac{dg(x)}{dx}\frac{dx}{dg(x)} du,
+$$
+po zjednodušení je patrná ekvivalence levé i pravé strany. V případě vícero složené funkce lze metodu substituce rovněž iterovat.
+
+Příklad č.1:
+$$
+\int \frac{\cos{\ln{x}}}{x} dx.
+$$
+\begin{enumerate}
+    \item Vhodně určíme substituci $u$ a její 1. derivaci  - ono obecně jde o to se daný příklad správně podívat
+    $$
+    u = \ln{x}, \frac{du}{dx} = \frac{1}{x}.
+    $$
+    \item Vměstnáme do původního integrálu
+    $$
+    \int \frac{\cos{\ln{x}}}{x} dx = \int \frac{\cos{u}}{x}\frac{x}{1}du = \int \cos{u}du = \sin{u} + C.
+    $$
+    \item Dosadíme za $u$
+    $$
+    \int \frac{\cos{\ln{x}}}{x} dx = \sin{\ln{x}} + C.
+    $$
+\end{enumerate}
+\subsection{Určitý integrál}
+Určitý integrál spojité reálné funkce $f(x)$ na intervalu $(a,b)$ jest dle její primitivní funkce $F(x)$ definován jako
+$$
+\int_a^bf(x)dx = F(x)\mid_a^b = F(b) - F(a),
+$$
+kde funkci $f(x)$ nazýváme integrandem a reálné číselné hodnoty $a$, respektive $b$ nazýváme dolní, respektive horní meze. Ve zkratce můžeme definovat určitý integrál funkce $f(x)$ jakožto numerickou hodnotu plochy pod grafem funkce $f(x)$ na intervalu $(a,b)$.
+
+Příklad č.1
+$$
+\int_1^{2} (x^2+x+1)dx
+$$
+\begin{enumerate}
+    \item Řešíme nejdříve jako neurčitý integrál tzn. hledáme primitivní funkci
+    $$
+    \int (x^2+x+1)dx = \frac{x^3}{3} + \frac{x^2}{2} + x + C.
+    $$
+    \item Nyní započítáme meze 
+    $$
+     \frac{x^3}{3} + \frac{x^2}{2} + x + C\mid_1^2.
+    $$
+    \item Vyčíslíme
+    $$
+    \left(\frac{2^3}{3}+\frac{2^2}{2}+2+C\right) - \left(\frac{1^3}{3}+\frac{1^2}{2}+1+C\right) = \frac{29}{6}.
+    $$
+    \item Konstanta $C$ v případě určitých integrálů nehraje žádnou roli.
+\end{enumerate}

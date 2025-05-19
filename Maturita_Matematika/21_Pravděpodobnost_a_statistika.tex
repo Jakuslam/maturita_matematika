@@ -1,0 +1,108 @@
+\title{ 22. Pravděpodobnost a statistika}
+\author{Marek Fuchs}
+\date{26.4.2025}
+
+\maketitle
+
+
+
+\section{Pravděpodobnost a statistika}
+    \subsection{Náhodný pokus}
+    V počtu pravděpodobnosti se jím rozumí libovolná opakovaná činnost za danných podmínek, jejíž výsledky závisí do jisté míry na náhodě.\\
+    Např. hod mincí, kostek, míchání karet.
+    \subsection{Množina všech možných výsledků náhodného pokusu $m$}
+    Jedná se o množinu všech výsledků, které mohou nastat v uvažovaném náhodném pokusu.
+    \subsection{Možné výsledky náhodného pokusu}
+    \begin{itemize}
+        \item Jsou navzájem rozlišitelné a v případě konečné množiny $m$ je lze vyjmenovat
+        \item navzájem se vylučují tj. žádné dva nemůžou nastat současně
+        \item 1 z nich vždy nastane tj. nemůže nastat výsledek, který by nepatřil do množiny
+        \item jsou dány volbou množiny $m$
+    \end{itemize}
+    \subsection{Pravděpodobnost}
+    Určuje chování náhodných jevů
+    \begin{itemize}
+            \item Jaká je šance, že daný jev nastane
+            \item Podíl všech příznivých jevů $m(A)$ ku všem možným jevům $m$\\
+            $$
+            \frac{m(A)}{m}
+            $$
+            \item Nejzákladnější zápis pravděpodobnosti je zlomek
+            \item Tento zlomek nemůže být větší jak jedna
+        \end{itemize}
+    \subsection{Typy jevů}
+    \begin{itemize}
+            \item $x=1$ - jev jistý (100\%)
+            \item $x=0$ - jev nemožný, zapisuje se prázdou množinou (0\%)
+            \item Doplňkový jev - Doplňkový jev k jevu $A$ je jev $A$´, který obsahuje všechny možné výsledky, které mohou nastat, ale nejsou zahrnuty v jevu $A$
+            \item Sjednocení jevů $A$ a $B$ - zapisuje se $A\cup B$ a nastává tehdy, když nastane alespoň jeden z jevů $A$ nebo $B$
+            \item Průnik jevů $A\cap B$ - Nastává tehdy, když nastanou oba jevy $A$ a $B$
+        \end{itemize}
+    \subsection{Pravděpodobnost jevu $A$}
+    Poměr počtu $m(A)$ výsledků příznivých jevu $A$ a počtu $m$ všech možných výsledků náhodného jevu.\\
+    $$
+    P(A)=\frac{m(A)}{m},\space\space P(A) \in \ \langle0;1\rangle.
+    $$
+    Předpokládáme, že všechny výsledky náhodného jevu jsou stejně možné - při hodu více mincemi musíme být schopni navzájem mince rozlišit, aby výsledky jevů byly stejně možné.
+    \subsection{Pravděpodobnost průniku jevů}
+    $$
+    P(A\cap B) = P(A) \cdot P(B),
+    $$ 
+    za předpokladu, že jevy jsou vzájemně nezávislé.
+    \subsection{Pravděpodobnost sjednocení jevů}
+    $$
+    A \cap B=\emptyset; \  P(A\cup B)=P(A)+P(B),
+    $$
+    $$
+    A \cap B\neq\emptyset; \  P(A\cup B)=P(A)+P(B)-P(A\cap B).
+    $$
+    \subsection{Variace}
+    Variace k-té třídy z $n$ prvků je každá uspořádaná k-tice vytvořená z celkového počtu $n$ prvků, přičemž při výběru záleží na pořadí jednotlivých prvků.\\
+    $$
+    V_k (n)=\frac{n!}{(n-k)!}
+    $$
+    \subsection{Kombinace}
+    Kombinace je neuspořádaná k-tice vytvořená z celkového počtu $n$ prvků, přičemž nezáleží na pořadí vybraných prvků
+    $$
+    C_k (n)= {n \choose k}.
+    $$
+    \subsection{Permutace}
+    Permutace je zvláštní případ variace, kde $k=n$. To znamená, že ze zadaných prvků postupně vybereme všechny. Každá permutace tedy odpovídá nějakému pořadí zadaných prvků: každý prvek se v pořadí musí objevit, ale žádný tam nemůže být dvakrát. Permutace z $n$ prvků je každá n-členná variace z těchto prvků.
+    $$
+    P(n)=n!,
+    $$
+    $$
+    P(n)=n \cdot(n-1)\cdot(n-2) \ ...2\cdot1=n!.
+    $$
+    \subsection{Kombinační číslo}
+    Z prvkové množiny $n$ vybíráme z podprvkové množiny $k$\\
+    $$
+    {n \choose k}.
+    $$
+    \subsection{Kombinatorické pravidlo o součinu}
+    Máme $a$ způsobů, jak něco provést, a $b$ způsobů jak udělat něco jiného, a je možné dělat obojí zároveň, pak existuje $a\cdot b$ způsobů jak danou činnost provést.
+    \subsection{Kombinatorické pravidlo o součtu}
+    Máme $a$ způsobů, jak něco provést, a $b$ způsobů jak udělat něco jiného, a je nemožné dělat obojí zároveň, pak pak existuje $a+b$ způsobů jak danou činnost provést.
+    \subsection{Statistika}
+    Vědní obor, zabývající se metodami kvantitativního hodnocení vlastností hromadných jevů a procesů.
+    \subsection{Statistický soubor}
+    Jistý konečný soubor zkoumaných dat.\\
+    Počet prvků v statistickém souboru nazýváme $rozstah$ $souboru$.
+    \subsection{Statistická jednotka}
+    Konkrétní prvek statistického souboru.
+    \subsection{Statistický znak}
+    Znak, který chceme měřit.
+    \subsection{Četnost}
+    Četnost může být buď relativní nebo absolutní a udává, kolik hodnot daného znaku se vyskytuje ve statistickém souboru — buď absolutně, nebo relativně vzhledem k celkovému počtu prvků souboru.\\
+    V množině se nemohou opakovat prvky.
+    \subsection{Aritmetický průměr}
+    Průměr všech hodnot ve statistickém souboru. Tedy podíl součtu všech hodnot ku počtu hodnot.\\
+    $$
+    p_a=\frac{x_1+x_2+x_3+x_n}{n}
+    $$
+    \subsection{Modus a medián}
+    \begin{itemize}
+        \item Modus - Hodnota, která má nejvyšší četnost, značí se $Mod(x)$.
+        \item Medián - Prostřední hodnota, značíme $Med(x)$.
+    \end{itemize}
+    

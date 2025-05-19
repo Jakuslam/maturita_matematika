@@ -1,0 +1,77 @@
+\title{ 12. Limita funkce a derivace funkce}
+\author{Marek Fuchs}
+\date{26.4.2025}
+
+\maketitle
+
+
+
+\section{Limita funkce a derivace funkce}
+\subsection{Co je to limita}
+Limita popisuje chování nějaké funkce v okolí určitého bodu, definuje spojitost fce.
+
+\subsection{Určení limity funkce v bodě}
+Jestliže chceme hledat limitu nějaké funkce $f$ v jistém bodě $a$, je třeba jediné: V definičním oboru $f$ musí existovat nějaká $x$, která se blíží libovolně blízko k $a$, takže má smysl říct "pro $x$ jdoucí k $a$"\\
+$$\lim_{x\to a} f(x)$$
+
+\subsection{Typy limit}
+\begin{itemize}
+            \item Vlastní limita - Existuje jako nějaké reálné číslo, čili rovná se nějakému konečnému číslu.
+            \item Nevlastní limita - Směřuje do nekonečna nebo mínus nekonečna, čili nemá konečnou hodnotu.
+            \item Limita ve vlatním bodě - V bodě $a$ říká, k čemu se hodnota fce. blíží, když se $x$ blíží k $a$ aniž by nutně musela být v tomto bodě definovaná.
+            \item Limita v nevlastním bodě - Situace, kdy se proměnná $x$ neblíží ke konečnému číslu, ale k nekonečnu nebo mínus nekonečnu.
+        \end{itemize}
+\subsection{Derivace funkce}
+Derivace funkce je změna (růst či pokles) její hodnoty v poměru ke změně jejího argumentu, pro velmi malé změny argumentu. Z definice dle limitního počtu plyne vztah 
+$$
+\frac{df(x)}{dx} = \lim_{h\rightarrow0}{\frac{f(x+h)-f(x)}{h}}.
+$$
+
+definujeme ji, jako: Derivace funkce v bodě je směrnicí její tečny v daném bodě.
+\subsection{Geometrický význam derivace}
+Směrnice tečny v daném bodě $x$\\
+(Rozepsané) Hodnota derivace funkce v daném bodě $x_0$ mi dává informaci o prudkosti růstu nebo klesání funkce v tomto bodě. Pokud bych v tomto bodě spustil tečnu, tak hodnota derivace se rovná tangens úhlu $\alpha$, které svírá tečna s kladným směrem osy $x$ 
+$$
+\tan{\alpha} = \frac{df(x)}{dx}\vert_{x=x_0}.
+$$
+\subsection{Směrnice}
+Směrnice je tangens úhlu, který svírá přímka/tečna s osou $x$\\
+-Tečna neexistuje pokud ůhel tg není definovaný (například $90^\circ=>$přímka je totožná s osou $y$)
+
+\subsection{L´hospitalovo pravidlo}
+Umožňuje za určitých předpokladů vypočítat limitu ve vlastním či nevlastním bodě podílu dvou reálných funkcí reálné proměnné v případě, že výpočet limity vede na neučitý výraz. Říká, že limita podílu dvou fcí. které splňují jisté předpoklady, je rovna limitě podílu dervací těchto fcí.\\
+-Používáme pokud zlomek vychází
+$$
+\frac{0}{0}; \frac{\infty}{\infty}.
+$$
+Praktické využití L´hospitala, kdy nemůžeme dosadit za $x=0$.
+\[
+\lim_{x \to 0} \frac{\sin x}{x} 
+= \lim_{x \to 0} \frac{\cos x}{1} 
+= \cos(0) = 1
+\]
+\subsection{Derivace základních funkcí}
+
+\begin{itemize}
+  \item Derivace konstanty: \quad \( (c)' = 0 \)
+  \item Derivace mocniny: \quad \( (x^n)' = n\cdot x^{n-1} \)
+  \item Derivace sinus: \quad \( (\sin x)' = \cos x \)
+  \item Derivace kosinus: \quad \( (\cos x)' = -\sin x \)
+  \item Derivace tangens: \quad \( (\tan x)' = \frac{1}{\cos^2 x} \)
+  \item Derivace kotangens: \quad \( (\cot x)' = -\frac{1}{\sin^2 x} \)
+  \item Derivace exponenciální funkce: \quad \( (e^x)' = e^x \)
+  \item Derivace mocninné exponenciální funkce: \quad \( (a^x)' = a^x \ln a \quad (a > 0, a \neq 1) \)
+  \item Derivace přirozeného logaritmu: \quad \( (\ln x)' = \frac{1}{x} \)
+  \item Derivace obecného logaritmu: \quad \( (\log_a x)' = \frac{1}{x \ln a} \quad (a > 0, a \neq 1) \)
+\end{itemize}
+
+\subsection{Pravidla pro derivace} 
+
+\begin{itemize}
+  \item Derivace součtu: \quad \( (f(x) + g(x))' = f'(x) + g'(x) \)
+  \item Derivace rozdílu: \quad \( (f(x) - g(x))' = f'(x) - g'(x) \)
+  \item Derivace součinu: \quad \( (f(x) \cdot g(x))' = f'(x)g(x) + f(x)g'(x) \)
+  \item Derivace podílu: \quad \( \left( \frac{f(x)}{g(x)} \right)' = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2} \)
+  \item Derivace složené funkce (řetězové pravidlo): \quad \( (f(g(x)))' = f'(g(x)) \cdot g'(x) \)
+\end{itemize}
+

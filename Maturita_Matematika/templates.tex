@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{amsmath, amssymb, amsthm} %nové matematika
+
+\usepackage[letterpaper, top=2.5cm, bottom=2cm]{geometry}
+
+\title{templates}
+\author{Jakub Sláma}
+\date{April 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Návod}
+Jak na to?
+
+\subsection{Vzorec v 1 řádku}
+test $E=mc^2$ zbytek textu
+
+
+\subsection{větší rovnice}
+% rce
+    \textbf{jednoduchá rce:}
+    
+    \begin{equation}
+       5+5=10
+    \end{equation}
+% soustava
+    \textbf{soustava rce:}
+    
+    \begin{equation}
+        \begin{split}
+            5 + 5 = 10 \\
+            1 + 1 = 2 
+        \end{split}
+    \end{equation}
+% zlomky
+    \textbf{zlomky:}
+    
+    \begin{equation}
+        A & = \frac{1}{2}
+    \end{equation}
+    
+    
+    
+\subsection{matematické znaky:}
+$$
+
+    
+
+$$
+\begin{equation} % znaky
+    \begin{split}
+        \sum_{k=1}^N k^2 \\
+        \\
+        ds^2 = dx_1^2 + dx_2^2 + dx_3^2 - c^2 dt^2 \\
+        \\
+        D(f)\in\mathbb{R}-\{1\} \\
+        \\
+         \frac{x - 7}{x^2 + 4} \\
+         \\
+         \sqrt[3]{q + \sqrt{ q^2 - p^3 }}\\
+         \\
+         \lim_{n \to \infty}x_n \\
+         \\
+         \int_{-N}^{N} e^x\, \mathrm{d}x \\
+         \\
+         a_1, a_2, a_3, \dots \\
+         \\
+         (a_n)_{n=1}^{\infty} \\
+         \\
+         a_n = \frac{1}{n}
+    \end{split}
+    
+\end{equation}
+
+
+
+\end{document}

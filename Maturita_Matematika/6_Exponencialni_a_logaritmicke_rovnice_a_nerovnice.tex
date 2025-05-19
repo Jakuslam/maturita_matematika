@@ -1,0 +1,89 @@
+\title{6 Exponenciální a logaritmické rovnice a nerovnice}
+\author{Roman Šnajder}
+\date{April 2025}
+
+\maketitle
+
+\section{Exponenciální a logaritmické rovnice a nerovnice}
+\subsection {Exponenciální rovnice}
+
+Z běžné rovnice se exponenciální stává, pokud obsahuje proměnnou v exponentu. Typickým příkladem exponenciální rovnice může být třeba $2^x = 8$.
+\subsection {Pravidla pro počítání s exponenty}
+$$a^x\cdot a^y=a^{x+y}$$
+$$a^{-x}=\frac{1}{a^x}$$
+$$a^{x^{y}}=a^{xy}$$
+$$a^{x-y}=\frac{a^x}{a^y}$$
+$$a^0=1$$
+Rovnice typu $a^{f(x)}=a^{g(x)}$ se řeší porovnáním exponentů (pro $a>0$, a $\neq 1$). Rovnice typu $a^{f(x)}=b^{g(x)}$, se řeší logaritmováním na tvar $f(x)\cdot\log_a a=g(x)\cdot\log_a b$ (pro $a>0$, $b>0$, $a\neq1$, $b\neq1$)
+\subsubsection{Jednoduchá exponenciální rovnice}
+Při řešení exponenciální rovnici, je žádoucí, pokud lze rovnici upravit na tvar o stejném základu na obou stranách rovnice.
+$$2^3=8$$
+$$2^x=2^3$$
+$$x=3$$
+Další případ nastává, pokud se na jedné straně rovnice vyskytuje jednička. Základ obsahující číslo 1 je možné zapsat jako libovolné číslo na nultou a tím vznikne exponenciální rovnice o stejném základu.
+$$5^x=1$$
+$$5^x=5^0$$
+$$x=0$$
+V exponenciální rovnici lze využít i substituce, kdy členy s neznámou jsou nahrazeny písmenem, které však po vypočtení nově vzniklé rovnice musí být dosazeno zpět do původního výrazu a až tento výsledek je řešením dané rovnice. Při použití této metody často vznikne kvadratická rovnice.
+$$9^x-25\cdot3^x-54=0$$
+$$3^{2x}-25\cdot3^x-54=0$$
+$$t^2-25t-54=0$$
+$$(t+2)\cdot(t-27)=0$$
+$$3^x=-2,x_1\neq R$$
+$$3^x=27$$
+$$x_2=3$$
+\subsection {Exponenciální nerovnice}
+Exponenciální nerovnice se řeší stejně jako rovnice. Liší se pouze u výsledku, kdy u nerovnice vznikne interval nebo intervaly. Pokud je neznámá menší než 0, pak se nerovnost vynásobí (-1).
+$$2^{1-x}>\frac{1}{2}$$
+$$2^{1-x}>2^{-1}$$
+$$1-x>-1$$
+$$-x>-2 /\cdot(-1)$$
+$$x<2$$
+$$K=(-\infty;2)$$
+Stejně jako u rovnice i zde lze použít substituce s tím rozdílem, že řešením bude interval nebo intervaly, pro které má daná rovnice řešení.
+$$9^x-25\cdot3^x-54>0$$
+$$3^{2x}-25\cdot3^x-54>0$$
+$$t^2-25t-54>0$$
+$$(t+2)\cdot(t-27)>0$$
+$$\begin{tabular}{c|c|c}
+    - & + & + \\
+    - & - & + 
+\end{tabular}$$
+$$x=(-\infty;-2)\cup(27;\infty)$$
+\subsection {Pravidla pro počítání s logaritmy}
+$$\log_{a}x+\log _{a}y=\log_{a}(xy)$$
+$$\log_{a}x-\log_{a}y=\log_{a}\frac{x}{y}$$
+$$\log_{a}x^y=y\cdot\log_{a}x$$
+$$\log_{a}a=1$$
+$$\log_{a}x=\frac{\log_c x}{\log_c a}$$
+\subsubsection{Logaritmické rovnice}
+Základní logaritmická rovnice s užitím pravidla. Zde však musí být určeny podmínky, jelikož logaritmus nemůže být záporný a tak budu řešit pouze pro x, která nám vyjdou kladná. (V tomto případě čísla $x \in (0;\infty)$)
+$$\log_{2}x=3$$
+$$x=2^3$$
+$$x=8$$
+Pokud je v příkladu logaritmus a k tomu nějaké další číslo, pak z tohoto čísla vytvoříme logaritmus a příklad se vyřeší podobně jako ten předchozí. Opět musí být určen definiční obor $$(1;\infty)$$\\
+$$\log_{2}(x-1)+2=\log_{2}(2x+1)$$
+$$\log_{2}(x-1)+\log_{2}4=\log_{2}(2x+1)$$
+$$\log_{2}[(x-1)\cdot4]=\log_{2}(2x+1)$$
+$$4x-4=2x+1$$
+$$x=\frac{5}{2}$$
+U logaritmický nerovnice opět použít substituce.
+$$\log_{2}^2x-2log_{2}x+1=0$$
+$$\log_{2}x=t$$
+$$t^2-2t+1=0$$
+$$(t-1)^2=0$$
+$$\log_{2}x=1, x=2$$
+\subsubsection{Logaritmické nerovnice}
+Logaritmické nerovnice se řeší stejně jako rovnice. Liší se pouze u výsledku, kdy u nerovnice vznikne interval nebo intervaly. I u nerovnic lze použít substituce. Pokud je základ logaritmu menší než 1, pak se nerovnost musí otočit! Dalším důležitým krokem je si, tak jako u rovnic, určit definiční obor.
+$$\log_{\frac{1}{2}}(2-x)<-3$$
+$$\log_{\frac{1}{2}}(2-x)<\log_{\frac{1}{2}}8$$
+$$2-x<8$$
+$$x<6$$
+$$x \in(-\infty;6)$$
+Z -3 se stane $\log_{\frac{1}{2}}8$ díky pravidlu pro počítání s logaritmy.
+
+\subsection {Použití logaritmu u exponenciálních rovnic a nerovnic}
+U rovnic i nerovnic se může sát, že žádnou jednoduchou úpravou nelze dostat stejné základy. Zde však lze zlogaritmovat obě strany logaritmem o stejném základu. Řešení je stejné jak pro rovnice tak pro nerovnice, liší se pouze výsledkem. U nerovnic to bude interval a u rovnic nějaké konkrétní číslo.
+$$2^x>5$$
+$$x\cdot\log_{2}2>\log_{2}5$$
+$$x>\log_{2}5$$

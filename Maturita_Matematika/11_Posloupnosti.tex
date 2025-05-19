@@ -1,0 +1,78 @@
+\title{11. Posloupnosti}
+\author{Kateřina Polášková (Jakub Sláma)}
+\date{30.4.2025}
+
+\maketitle
+
+\section{Posloupnosti}
+Posloupnost je funkce, jejíž definičním oborem je množina $\mathbb{N}$ (všech přirozených čísel). \\
+Posloupnost se nazývá NEKONEČNÁ, pokud je jejím definičním oborem celá množina $\mathbb{N}$.
+Posloupnost se nazývá KONEČNÁ, pokud je jejím definičním oborem množina prvních $n$ přirozených čísel ${1, 2, 3, ..., n}$. \\ \\
+
+Funkční hodnoty posloupnosti se nazývají ČLENY POSLOUPNOSTI; funkční hodnota
+posloupnosti v bodě $n \in N$ se nazývá nTÝ ČLEN POSLOUPNOSTI a značí se $a_n$. \\ \\
+
+Posloupnost (nekonečnou) zapisujeme $(a_n)^\infty_ {n=1}$, nebo $(a_1,a_2,a_3,.....a_n)$ \\
+Konečnou posloupnost zapisujeme $(a_n)^k_{n=1}$ nebo $(a_1,a_2,a_3,.....a_k)$\\
+Posloupnost je nejčastěji zadána jedním z těchto dvou způsobů:
+\begin{itemize}
+    \item Vzorcem, vyjadřujícím n-tý člen posloupnosti pomocí $n$
+    \item Rekurentně udáním prvního členu posloupnosti a rekurentního vzorce, který
+vyjadřuje $(n + 1)$-ní člen posloupnosti pomocí členů předchozích.
+\end{itemize}
+
+\subsection{Definice aritmetické posloupnosti}
+ARITMETICKÁ POSLOUPNOST je taková posloupnost, v níž je rozdíl dvou sousedních členů
+konstantní. Tento rozdíl $a_{n+1} -a_n $se nazývá DIFERENCE a označuje se $d$, kde $(d \in \mathbb{R})$. \\ \\
+
+Rekurentní vzorec aritmetické posloupnosti je: $a_{n+1}=a_n+d$, kde $n \in \mathbb{N}$\\ \\
+
+Obecný vzorec aritmetické posloupnosti je: $a_n=a_1+(n-1)d$\\
+Pro každé dva členy $a_r$, $a_s$ aritmetické posloupnosti platí: $a_r-a_s=(r-s)d$\\
+Pro součet prvních $n$ členů aritmetické posloupnosti platí:$s_n=\frac{n}{2}(a_1+a_n)$
+
+\subsection{Definice geometrické posloupnosti}
+GEOMETRICKÁ POSLOUPNOST je taková posloupnost, v níž podíl následujícího a předchozího
+členu je konstantní. Tento podíl se označuje $q$ a nazývá se KVOCIENT $(q \in \mathbb{R})$.\\
+Rekurentní vzorec geometrické posloupnosti je $a_{n+1} = a_n.q$ nebo $\frac{a_{n+1}}{a_n}=q, n\in \mathbb{N}$ \\
+Obecný vzorec geometrické posloupnosti je $a_n=a_1 \cdot q^{n-1}$\\
+Pro každé dva členy geometrické posloupnosti $a_r, a_s$ platí: $a_r=a_s \cdot q^{r-s}$\\
+Pro součet prvních $n$ členů geometrické posloupnosti platí:
+$$
+    s_n=a_1\frac{q^n-1}{q-1}
+$$
+pro $q \neq 1$\\
+$$
+    s_n=n \cdot a_1 
+$$ 
+pro $ q=1$
+
+\subsection{Důkaz matematickou indukcí}
+Dokažte: $\forall\, (n \in \mathbb{N}) :\quad 1 + 2 + \dots + n = \frac{1}{2} \cdot (n + 1) \cdot n$\\ \\
+
+Prvním krokem je ověření platnosti pro číslo 1. Dosadíme tedy toto číslo do rovnosti. Levá strana bude
+1, pravá strana bude $\frac{1}{2} \cdot 1 \cdot (1 + 1)$ což je opět 1. Pro číslo 1 tedy věta platí. \\
+Přichází na řadu indukční krok. Předpokládejme, že tato věta platí pro nějaké přirozené číslo $k$, tedy že
+pro toto $k$ platí:
+$$
+    1 + 2 + \dots + k = \frac{1}{2} \cdot (k + 1) \cdot k
+$$
+Nyní musíme dokázat, že za tohoto předpokladu platí věta i pro $(k + 1)$, tedy že platí:
+$$
+    1 + 2 + \dots + k + (k + 1) = \frac{1}{2} \cdot (k + 2)(k + 1)
+$$
+Levá strana je $1 + 2 + … k + (k + 1)$. My však z našeho předpokladu víme, že
+$1 + 2 + … k = ½ \cdot (k + 1) \cdot k$, a tak můžeme psát:\footnote{\scalebox{.8}[1]{Pro ty co jsou zmatení: jedná se o původní větu, s $k+1$ přičteno na obou stranách, dále upravujem pravou stranu rovnice.}}
+$$
+    1 + 2 + … k + (k + 1) = \frac{1}{2} \cdot (k + 1) \cdot k + (k + 1)
+$$
+Pokud budeme výraz dále upravovat (vytkneme závorku $(k + 1)$), získáme:
+$$
+    \frac{1}{2} \cdot (k + 1) \cdot k + (k + 1) = (k + 1)(\frac{1}{2} \cdot k + 1) = \frac{1}{2} \cdot (k + 2)(k + 1)
+$$
+Dostali jsme se od levé strany dokazované rovnosti k pravé, dokázali jsme, že platí:
+$$
+    1 + 2 + … k + (k + 1) = \frac{1}{2} \cdot (k + 2)(k + 1).
+$$
+Provedli jsme oba kroky důkazu a věta je tak dokázána
+

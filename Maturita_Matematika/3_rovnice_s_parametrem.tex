@@ -1,0 +1,141 @@
+\title{3. Rovnice s parametrem}
+\author{Matyáš Horejsek}
+\date{26.4.2025}
+
+\maketitle
+
+
+
+\section{Rovnice s parametrem}
+    \subsection{Obecné rovnice s parametrem}
+Rovnice s parametrem jsou rovnice, které obsahují kromě neznámé $x$ ještě další proměnné (označujeme je například $p$), kterým se říká parametry.\\\\
+Rovnice s parametrem představují souhrnný zápis množiny rovnic, které bychom získali po dosazení jednotlivých přípustných hodnot za parametry. Řešíme-li rovnice s parametrem, hledáme kořeny v závislosti na hodnotě parametru.\\\\
+Parametry ovlivňují hodnotu proměnné s ohledem na provádění operace, a proto musíme provést tzv. diskusi řešení vzhledem k parametru.
+    \subsection{Lineární rovnice s parametrem}
+Lineární rovnice s parametrem jsou takové rovnice s parametrem, ve kterých se proměnná $x$ vyskytuje pouze v první mocnině.
+        \subsubsection{Postup řešení lineární rovnice s parametrem}
+\begin{enumerate}
+    \item Upravení rovnice a vyjádření neznámé
+        \begin{itemize}
+            \item Všechny členy s neznámou převedeme na jednu stranu, ostatní na druhou.
+            \item Vytkneme neznámou a rovnici upravíme do tvaru:\\
+            $$
+            k(a)\cdot x=q(a)
+            $$
+            Kde $x$ je neznámá\\
+            $a$ je parametr\\
+            a $k(a)$, $q(a)$ jsou výrazy závislé na parametru.
+        \end{itemize}
+    \item Podmínky pro dělení
+        \begin{itemize}
+             \item 
+               \textbf{Vzorová rovnice:} $(a-2)\cdot x=a+1$\\
+            \item
+            Pokud chceme rovnici vydělit výrazem s parametrem (například $a-2$), musíme zjistit, kdy je tento výraz roven nule.
+            \item \textbf{Nulou dělit nelze!} 
+            Proto je nutné rozlišit následující případy:
+        \end{itemize}   
+                \begin{enumerate}
+                        \item Pokud $k(a)\not=0$, tedy $a-2\not=0$, lze dělit a získáváme jedno řešení:
+                        $$
+                         x=\frac{q(a)}{k(a)}
+                        $$
+                        Tedy z příkladu:
+                        $$
+                        x=\frac{a+1}{a-2}
+                        $$
+                        \item Pokud $k(a)=0$, musíme dosadit tuto hodnotu parametru zpět do původní rovnice a zjistit, zda:
+                            \begin{itemize}
+                                \item Rovnice je pravdivá pro všechna $x$, tedy má nekonečně mnoho řešení.\\ 
+                                $x\in \mathbb{R}$
+                                \item Rovnice je nepravdivá pro všechna $x$, tedy nemá řešení.\\
+                                $x\not\in \mathbb{R}$
+                            \end{itemize}
+                \end{enumerate}
+    \item Shrnutí výsledků
+        \begin{itemize}
+            \item Výsledky se často přehledně uvádějí v tabulce tzv. \textbf{Tabulka diskuse}, kde jsou jednotlivé případy podle hodnoty parametru a odpovídající množina řešení.
+        \end{itemize}
+\end{enumerate}
+   
+        \textbf{Vzorová tabulka z příkladu:}
+        
+            \begin{center}
+            \begin{tabular}{||c| c||} 
+             \hline
+             \textbf{Hodnota parametru $a$} & \textbf{Hodnota kořene $K$} \\ [0.5ex] 
+             \hline\hline
+             $a\not=2$ & $K=\{\frac{a+1}{a-2}\}$ \\
+             \hline
+             $a=2$ & $K=\emptyset$ \\
+             \hline
+            \end{tabular}
+            \end{center}
+  
+        \subsubsection{Diskuse k řešení lineární rovnice}
+Diskuse řešení lineární rovnice s parametrem spočívá v rozboru všech možných hodnot parametru a určení, jak se pro tyto hodnoty mění množina řešení rovnice. Klíčové je správně určit podmínky, kdy lze dělit výrazem obsahující parametr, a analyzovat speciální případy, kdy tento výraz zaniká.\\\\
+\textbf{Obecné zásady diskuse:}
+ \begin{itemize}
+     \item Vždy určete podmínky, kdy nelze dělit výrazem s parametrem (například kdy je koeficient u $x$ roven nule).
+     \item Pro vyloučené hodnoty parametru ověřte, zda má rovnice nekonečně mnoho, jedno nebo žádné řešení.
+     \item  Výsledky vždy shrňte přehledně (tabulkou nebo v bodech), kde je jasně vidět závislost řešení na hodnotě parametru.
+ \end{itemize}
+    \subsection{Kvadratické rovnice s parametrem}
+Kvadratické rovnice s parametrem jsou takové rovnice s parametrem, ve kterých se neznámá vyskytuje nejvýše ve druhé mocnině. Je důležité, aby ve druhé mocnině se nacházela neznámá, jinak se nejedná o kvadratickou rovnici. Parametr smí, ale nemusí se nacházet v libovolné $n$-té mocnině.\\
+Tedy z obecné rovnice $(a)x^2+(b)x+(c)=0$, kde alespoň jeden koeficient ($a,b,c$) závisí na hodnotě parametru (např. $m$)\\
+\textbf{Příklad:}$(m-1)x^2+2mx+(m+2)=0$\\
+Než začneme řešit rovnici musíme určit typ rovnice a v jakém případě nám zůstává kvadratickou. Pokud:
+\begin{itemize}
+    \item $a\not=0$ Rovnice má standardní kvadratický tvar.\\
+    Příklad: $(m-1)\not=0$, tedy pro $m\in\mathbb{R}-(1)$
+    \item $a=0$ Rovnice se redukuje na lineární $bx+c=0$\\
+    Příklad: $(m-1)=0$, tedy $(m-1)x^2...$ nám vypadává.
+    \item $a=0$ a současně i $b=0$ rovnice nemá řešení a ztrácí smysl.
+\end{itemize}
+
+Při řešení kvadratických rovnic s parametrem musíme provést diskusi řešení vzhledem k parametru, stejně jako u lineárních rovnic s parametrem.
+        \subsubsection{Diskuse k řešení kvadratické rovnice s parametrem}
+Diskusi provádíme nejprve určením, kdy nám rovnice zůstává kvadratickou a kdy se redukuje na lineární tvar. Poté provedeme \textbf{analýzu diskriminantu}, poté můžeme vše zapsat opět přehledně do tabulky, stejně jako u lineární rovnice. \textbf{POZOR!} Do tabulky uvádíme i případ, kdy se nám kvadratická rovnice redukuje na lineární rovnici.\\\\
+Diskriminant $D=b^2-4a\cdot c$, kde je tedy alespoň jeden koeficient ($a, b, c$) závislí na hodnotě parametru, nám určuje počet reálných kořenů:\\
+\begin{itemize}
+    \item $D>0$: Rovnice má dva reálné kořeny. Graficky má rovnice s osou $x$ dva průsečíky.
+    \item $D=0$: Rovnice má jeden reálný kořen. Graficky má rovnice s osou $x$ jeden průsečík a stává se tečnou.
+    \item $D<0$: Rovnice nemá žádné reálné kořeny, má pouze komplexně sdružené kořeny. Graficky nemá rovnice s osou $x$ žádný průsečík.
+\end{itemize}
+\textbf{Vzorová tabulka z příkladu:}
+        
+            \begin{center}
+            \begin{tabular}{||c| c||} 
+             \hline
+             \textbf{Hodnota parametru $m$} & \textbf{Hodnota kořenů $K$} \\ [0.5ex] 
+             \hline\hline
+             $m=1$ & $K=\{-\frac{3}{2}\}$ \\
+             \hline
+             $m<2-\{1\}$ & $K=\{-\frac{1-\sqrt{3}}{2};-\frac{1+\sqrt{3}}{2}\}$ \\
+             \hline
+             $m=2$ & $K=\{-2\}$\\
+             \hline
+             $m>2$ & $K=\emptyset$\\
+             \hline
+            \end{tabular}
+            \end{center}
+
+    \subsection{Vztahy mezi kořeny a koeficienty kvadratické rovnice}
+Pro kořeny $x_1$, $x_2$ obecné kvadratické rovnice $ax^2+bx+c=0$, případně normované kvadratické rovnice $x^2+\frac{b}{a}x+\frac{c}{a}=0$ kde $a\not=0$ a $a,b,c \in \mathbb{C}$ platí vztahy, které se nazývají Vietovy vzorce.
+        \subsubsection{Vietovy vzorce}
+Tyto vzorce (vztahy) nám umožňují:
+\begin{itemize}
+    \item Rychle určit součet a součin kořenů bez jejich explicitního výpočtu.
+    \item Sestavit kvadratickou rovnici, známe-li její kořeny.
+    \item Rozkládat kvadratické trojčleny na součin dvou lineárních výrazů.
+\end{itemize}
+\textbf{Vždy musí platit společně:}\\
+\begin{center}
+            \begin{tabular}{||c| c||} 
+             \hline
+             $a(x_1+x_2)=-b$ & $a\cdot x_1\cdot x_2=c$ \\
+             \hline
+             $x_1+x_2=-\frac{b}{a}$ & $ x_1 \cdot x_2=\frac{c}{a}$ \\
+             \hline
+            \end{tabular}
+            \end{center}

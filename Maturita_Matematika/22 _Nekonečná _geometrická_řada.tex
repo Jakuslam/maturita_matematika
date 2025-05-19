@@ -1,0 +1,115 @@
+\title{ 23. Nekonečná geometrická řada}
+\author{Marek Fuchs (Oliver Hadraba)}
+\date{26.4.2025}
+
+\maketitle
+
+
+
+\section{Nekonečná geometrická řada}
+    \subsection{Řada}
+    Vznikne sečtením prvků posloupnosti.\\
+    Je dána posloupností $a_n$. A zapisuje se:
+    $$
+    a_1+a_2+a_3+...+a_n=...
+    $$\\
+    Členy posloupnosti se nazývají členy řady
+    \subsection{Typy řad}
+    \begin{itemize}
+        \item Konvergentní řada - řada je konvergentní jeli její součet realné číslo
+        \item Divergentní řada - řada je divergentní pokud výsledek řady není realné číslo
+    \end{itemize}
+    \subsection{Konečná řada}
+    \begin{itemize}
+        \item Nastává když máme konečnou posloupnost 
+        $$
+        (a_n)^k _{n=1}
+        $$
+        \item Zapisuje se: 
+        $$
+        \sum_{n\rightarrow k}
+        $$
+    \end{itemize}
+    \subsection{Nekonečná řada}
+    \begin{itemize}
+        \item Pokud je posloupnost nekonečna tedy 
+        $$
+        (a_n)^\infty_{n=1}
+        $$
+        \item Vzniká nekonečná geometrická řada tedy: 
+        $$
+        \sum^\infty_{n=1}a_n
+        $$
+    \end{itemize}
+    \subsection{Geometrická řada}
+    \subsubsection{Základní vlastnosti}
+         V každém členu je předchozí člen násoben konstantou $q$, $q$ nesmí být $0$\\ 
+            $$
+            a_n=a_1\cdot q^{(n-1)}
+            $$
+    \subsubsection{Legenda}
+            \begin{itemize}
+                \item kvocient $q$ - každý člen kromě prvního je stálým násobkem předchozího členu
+                $$
+                q=\frac{a_{n+1}}{a_n}
+                $$
+                \item členy posloupnosti $a_1,a_2,...$ - hodnoty spadající do $D(f)$ posloupnost
+            \end{itemize}
+    \subsection{Nekonečná řada}
+        \begin{itemize}
+            \item Pro nekonečnou geometrickou řadu
+            $$
+            S=a+aq+aq^2+aq^3+...
+            $$
+            \item Součet existuje jen pokud $|q|<1$ Pak platí :
+            $$
+            S=\frac{a}{1-q}
+            $$
+            \item Pokud $|q|\geq 1$, řada diverguje - součet neexistuje.
+            \end{itemize}
+    \subsection{Postup řešení}
+        \begin{itemize}
+            \item Rozpoznej geometrickou řadu vevýrazu.\\
+            (Ověř, že má tvar $S=a+aq+aq^2+...$).
+            \item Zjisti hodnota $a$ a $q$.
+            \item Zkontroluj, že $|q|<1$ (jinak nelze použít vzorec viz. 7.8).
+            \item Výpočítej součet pomocí $S=\frac{a}{1-q}$
+            \item Použij výsledek k řešení rovnice, nebo k řešení hodnoty výrazu.
+        \end{itemize}
+    \subsection{Podmínky pro nahrazení řady vzorcem}
+        \begin{itemize}
+            \item Řada je nekonečná
+            \item Řada je geometrická
+            \item $|q|<1$
+        \end{itemize}
+    \subsection{Příklad}
+    $$
+    \sum^\infty_{n=1}=1 \quad\quad 3^x+3^{2x}+3^{3x}
+    $$
+    $$
+    a_1=3^x \rightarrow 3^x\cdot q=3^{2x}
+    $$
+    $$
+    q=\frac{3^{2x}}{3^x}\rightarrow q=3^x
+    $$
+    $$
+    3^x<1 \rightarrow x\subset (-\infty;0)
+    $$
+    $$
+    \frac{3^x}{1-3^x}=1
+    $$
+    $$
+    3^x=1-3^x
+    $$
+    $$
+    2\cdot 3^x=1
+    $$
+    $$
+    3^x=\frac{1}{2}
+    $$
+    $$
+    log_33^x=log_3\frac{1}{2}
+    $$
+    $$
+    x=log_3\frac{1}{2}
+    $$
